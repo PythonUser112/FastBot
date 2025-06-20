@@ -68,11 +68,11 @@ void motorWrite() {
     angeschaltet = 0;
     digitalWrite(blinker_l, LOW);
     digitalWrite(blinker_r, LOW);
-    if(l1 == 0 && l2 == 1 && l2 == r2) {
+    if(l1 == 0 && l2 == 1 && r2 == 1) {
       digitalWrite(rueckfahrtlicht, HIGH);
     }
     else {
-      digitalWrite(rueckfahrtlicht, HIGH);
+      digitalWrite(rueckfahrtlicht, LOW);
     }
   }
   analogWrite(mot_left_1, 255 * l1 - mot_left_korrektur);
